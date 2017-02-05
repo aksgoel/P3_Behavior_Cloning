@@ -1,5 +1,7 @@
 """*****************CREDITS**********************
 
+Udacity: Self-Driving Car Nano Degree
+
 VGG-16: Very Deep Convolutional Networks for Large-Scale Image Recognition:: https://gist.github.com/baraldilorenzo/07d7802847aaad0a35d3
 NVIDIA: CNN architecture - End to End Learning for Self-Driving Cars:: https://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf
 
