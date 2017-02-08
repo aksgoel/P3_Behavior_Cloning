@@ -25,12 +25,6 @@ Build (and train), a convolution neural network in Keras that predicts steering 
 [//]: # (Image References)
 
 [image1]: ./examples/placeholder.png "Model Visualization"
-[image2]: ./examples/placeholder.png "Grayscaling"
-[image3]: ./examples/placeholder_small.png "Recovery Image"
-[image4]: ./examples/placeholder_small.png "Recovery Image"
-[image5]: ./examples/placeholder_small.png "Recovery Image"
-[image6]: ./examples/placeholder_small.png "Normal Image"
-[image7]: ./examples/placeholder_small.png "Flipped Image"
 
 
 ###Model Architecture and Training Strategy
@@ -85,37 +79,72 @@ At the end of the process, the vehicle is able to drive autonomously around the 
 
 ####2. Final Model Architecture
 
-The final model architecture (model.py lines 18-24) consisted of a convolution neural network with the following layers and layer sizes ...
+The final model architecture (model.py lines 18-24) consisted of a convolution neural network with the following layers and layer sizes 
 
-Here is a visualization of the architecture (note: visualizing the architecture is optional according to the project rubric)
+  - batchnormalization: 3, 1, 1
+
+  - Convolution2D: 32, 3, 3
+  - MaxPooling2D
+
+  - Convolution2D: 32, 3, 3
+  - MaxPooling2D
+
+  - Convolution2D: 32, 3, 3
+  - MaxPooling2D
+  
+  - Convolution2D: 64, 3, 3
+  - MaxPooling2D
+  
+  - Convolution2D: 128, 3, 3
+  - MaxPooling2D
+  
+  - Flatten
+  
+  - Fully Connected (Dense): 1024
+  - DropOut: 0.5
+ 
+  - Fully Connected (Dense): 512
+  - DropOut: 0.5
+  
+  - Fully Connected (Dense): 1
+  
+
+Here is a visualization of the architecture:
 
 ![alt text][image1]
  
 
 ####3. Creation of the Training Set & Training Process
 
-To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
+Since I did not have access to a joystick (required for smoother data collection) - I trained my model over Udacity's sample dataset. I generated additional datasets by applying image augmentation techniques. Here is an example image of center lane driving:
 
 ![alt text][image2]
 
-I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to .... These images show what a recovery looks like starting from ... :
+To improve left and right turn coorection, I used images from left and right camera of car. Here are examples of left and right camera images:
 
-![alt text][image3]
-![alt text][image4]
-![alt text][image5]
 
-Then I repeated this process on track two in order to get more data points.
 
-To augment the data sat, I also flipped images and angles thinking that this would ... For example, here is an image that has then been flipped:
+To augment the data set, I randomly applied:
 
+- brightness shifts:
 ![alt text][image6]
 ![alt text][image7]
 
-Etc ....
+- vertical shifts:
+![alt text][image6]
+![alt text][image7]
+
+- shear shift:
+![alt text][image6]
+![alt text][image7]
+
+- added shadows:
+![alt text][image6]
+![alt text][image7]
 
 After the collection process, I had X number of data points. I then preprocessed this data by ...
 
 
 I finally randomly shuffled the data set and put Y% of the data into a validation set. 
 
-I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was Z as evidenced by ... I used an adam optimizer so that manually training the learning rate wasn't necessary.
+I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 3 as evidenced by ... I used an adam optimizer so that manually training the learning rate wasn't necessary.
