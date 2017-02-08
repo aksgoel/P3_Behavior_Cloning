@@ -20,3 +20,8 @@
 ###Test video on first track:
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/Ra-MEWdlCWA/0.jpg)](https://www.youtube.com/watch?v=Ra-MEWdlCWA)
+
+
+###VGG-16 Inspired Model Architecture
+
+![model architecture] (https://docs.google.com/drawings/d/1glfZJVpTOzPiCq4EVRtup1TaidIDVGetRC1Q5U4adMk/pub?w=1402&h=416)
