@@ -24,8 +24,6 @@ Build (and train), a convolution neural network in Keras that predicts steering 
 
 [//]: # (Image References)
 
-[image1]: ./examples/placeholder.png "Model Visualization"
-
 
 ###Model Architecture and Training Strategy
 
@@ -81,38 +79,7 @@ At the end of the process, the vehicle is able to drive autonomously around the 
 
 The final model architecture (model.py lines 18-24) consisted of a convolution neural network with the following layers and layer sizes 
 
-  - batchnormalization: 3, 1, 1
-
-  - Convolution2D: 32, 3, 3
-  - MaxPooling2D
-
-  - Convolution2D: 32, 3, 3
-  - MaxPooling2D
-
-  - Convolution2D: 32, 3, 3
-  - MaxPooling2D
-  
-  - Convolution2D: 64, 3, 3
-  - MaxPooling2D
-  
-  - Convolution2D: 128, 3, 3
-  - MaxPooling2D
-  
-  - Flatten
-  
-  - Fully Connected (Dense): 1024
-  - DropOut: 0.5
- 
-  - Fully Connected (Dense): 512
-  - DropOut: 0.5
-  
-  - Fully Connected (Dense): 1
-  
-
-Here is a visualization of the architecture:
-
-![alt text][image1]
- 
+![model architecture] (https://docs.google.com/drawings/d/1glfZJVpTOzPiCq4EVRtup1TaidIDVGetRC1Q5U4adMk/pub?w=1402&h=416)
 
 ####3. Creation of the Training Set & Training Process
 
