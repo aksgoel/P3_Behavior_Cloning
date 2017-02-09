@@ -22,9 +22,6 @@ Build (and train), a convolution neural network in Keras that predicts steering 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/Ra-MEWdlCWA/0.jpg)](https://www.youtube.com/watch?v=Ra-MEWdlCWA)
 
 
-[//]: # (Image References)
-
-
 ###Model Architecture and Training Strategy
 
 ####1. VGG-16 inspired model architecture has been used
