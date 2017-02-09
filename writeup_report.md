@@ -87,6 +87,30 @@ The final model architecture (model.py lines 18-24) consisted of a convolution n
 
 ![model architecture] (https://docs.google.com/drawings/d/1glfZJVpTOzPiCq4EVRtup1TaidIDVGetRC1Q5U4adMk/pub?w=1402&h=416)
 
+-------------------------------------------------------------------------------------
+Layer (type):             Output Shape             
+
+batchnormalization_1:      (None, 100, 100, 3)   
+convolution2d_1:           (None, 98, 98, 32)                
+maxpooling2d_1:            (None, 49, 49, 32)                   
+convolution2d_2:           (None, 47, 47, 32)            
+maxpooling2d_2:            (None, 23, 23, 32)              
+convolution2d_3:           (None, 21, 21, 32)         
+maxpooling2d_3:            (None, 10, 10, 32)      
+convolution2d_4:           (None, 8, 8, 64)             
+maxpooling2d_4:            (None, 4, 4, 64)                  
+convolution2d_5:           (None, 2, 2, 128)           
+maxpooling2d_5:            (None, 1, 1, 128)           
+flatten_1:                 (None, 128)             
+dense_1:                   (None, 1024)                 
+dropout_1:                 (None, 1024)                      
+dense_2:                   (None, 512)                      
+dropout_2:                 (None, 512)                    
+dense_3:                   (None, 1)                             
+
+-------------------------------------------------------------------------------------
+
+
 ####3. Creation of the Training Set & Training Process
 
 Since I did not have access to a joystick (required for smoother data collection) - I trained my model over Udacity's sample dataset. I generated additional datasets by applying image augmentation techniques. Here is an example image of center lane driving:
