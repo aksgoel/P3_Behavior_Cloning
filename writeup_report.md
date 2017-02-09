@@ -121,12 +121,15 @@ Since I did not have access to a joystick (required for smoother data collection
 To improve left and right turn coorection, I used images from left and right camera of car. Here are examples of left and right camera images:
 
 - left camera
+
 ![model architecture] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/left_2016_12_01_13_43_28_912.jpg)
 
 - right camera
+
 ![model architecture] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/right_2016_12_01_13_43_28_912.jpg)
 
 - center camera in BGR
+
 ![center camera image] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/base_BGR.png)
 
 To augment the data set, I randomly applied:
