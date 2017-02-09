@@ -165,7 +165,7 @@ To augment the data set with additional training data, I futher randomly applied
 
 ![model architecture] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/flip.png)
 
-After the collection process, I had X number of data points. I applied image normalization to this dataset.
+With continous generation of additional training data (with image augmentation techniques), I created a large number of data points. I further applied image normalization to this dataset.
 
 I created a validation data set without applying image augmentation techniques to it.
 
