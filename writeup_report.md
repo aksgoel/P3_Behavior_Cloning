@@ -119,7 +119,7 @@ Since I did not have access to a joystick (required for smoother data collection
 
 ![model architecture] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/center_2016_12_01_13_43_28_912.jpg)
 
-To improve left and right turn coorection, I used images from left and right camera of car. Here are examples of left and right camera images:
+To improve left and right turn coorection, I used images from left and right camera of car. Here a steering angle correction of +3.0 and -3.0 were appled. Here are examples of left and right camera images:
 
 - left camera
 
@@ -161,7 +161,7 @@ To augment the data set with additional training data, I futher randomly applied
 ![image] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/sheer_2.png)
 ![image] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/sheer_3.png)
 
-- flipped image: image is flipped as the dataset is inbalanced, having larger left turns. 
+- flipped image: image is flipped as the dataset is inbalanced, having larger left turns. (steering angles were also flipped with sa=-sa)
 
 ![image] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/flip.png)
 
