@@ -116,6 +116,7 @@ dense_3:                   (None, 1)
 Since I did not have access to a joystick (required for smoother data collection) - I trained my model over Udacity's sample dataset. I generated additional datasets by applying image augmentation techniques. Here is an example image of center lane driving:
 
 - center camera
+
 ![model architecture] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/center_2016_12_01_13_43_28_912.jpg)
 
 To improve left and right turn coorection, I used images from left and right camera of car. Here are examples of left and right camera images:
@@ -135,24 +136,15 @@ To improve left and right turn coorection, I used images from left and right cam
 To augment the data set, I randomly applied:
 
 - flipped image:
-![model architecture] (https://docs.google.com/drawings/d/1glfZJVpTOzPiCq4EVRtup1TaidIDVGetRC1Q5U4adMk/pub?w=1402&h=416)
-
 - brightness shifts:
+
 ![model architecture] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/brightness_1.png)
 ![model architecture] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/brightness_2.png)
 ![model architecture] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/brightness_3.png)
 
 - vertical shifts:
-![model architecture] (https://docs.google.com/drawings/d/1glfZJVpTOzPiCq4EVRtup1TaidIDVGetRC1Q5U4adMk/pub?w=1402&h=416)
-![model architecture] (https://docs.google.com/drawings/d/1glfZJVpTOzPiCq4EVRtup1TaidIDVGetRC1Q5U4adMk/pub?w=1402&h=416)
-
 - shear shift:
-![model architecture] (https://docs.google.com/drawings/d/1glfZJVpTOzPiCq4EVRtup1TaidIDVGetRC1Q5U4adMk/pub?w=1402&h=416)
-![model architecture] (https://docs.google.com/drawings/d/1glfZJVpTOzPiCq4EVRtup1TaidIDVGetRC1Q5U4adMk/pub?w=1402&h=416)
-
 - added shadows:
-![model architecture] (https://docs.google.com/drawings/d/1glfZJVpTOzPiCq4EVRtup1TaidIDVGetRC1Q5U4adMk/pub?w=1402&h=416)
-![model architecture] (https://docs.google.com/drawings/d/1glfZJVpTOzPiCq4EVRtup1TaidIDVGetRC1Q5U4adMk/pub?w=1402&h=416)
 
 After the collection process, I had X number of data points. I applied image normalization to this dataset.
 
