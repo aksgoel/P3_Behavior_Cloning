@@ -61,7 +61,8 @@ In order to gauge how well the model was working, I added an additoinal validati
 
 To combat the overfitting, I modified the model so that my mean square error on validation error gradaully reduces. 
 
-Interestingly, I notice that my mean square error is lower on my validation data than on my training data. Hence I am quite confident that I am avoiding overfitting. The possible reason for mean square error being lower on my validation data could be because I am not adding the augmented image data to my validation dataset.   
+Interestingly, I notice that my mean square error is lower on my validation data than on my training data. Hence I am quite confident that I am avoiding overfitting. The possible reason for mean square error being lower on my validation data could be because I am not adding the augmented image data to my validation dataset.
+
 -------------------------------------------------------------------------------------
 Epoch 1/3
 25600/25600 [==============================] - 272s - loss: 0.0926 - val_loss: 0.0490
@@ -71,8 +72,8 @@ Epoch 2/3
 
 Epoch 3/3
 25600/25600 [==============================] - 269s - loss: 0.0359 - val_loss: 0.0303
--------------------------------------------------------------------------------------
 
+-------------------------------------------------------------------------------------
 The final step was to run the simulator to see how well the car was driving around track one. There were a few spots where the vehicle fell off the track such as 
 - near to the tree (due to the shadow), 
 - near the steep right turn close to the water (due to strong correction need),
