@@ -1,7 +1,5 @@
 """*****************CREDITS**********************
 
-Udacity: Self-Driving Car Nano Degree
-
 VGG-16: Very Deep Convolutional Networks for Large-Scale Image Recognition:: https://gist.github.com/baraldilorenzo/07d7802847aaad0a35d3
 NVIDIA: CNN architecture - End to End Learning for Self-Driving Cars:: https://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf
 
@@ -164,6 +162,23 @@ def _generator(batch_size, X, y):
             batch_y.append(steering_angle)
         yield np.array(batch_X), np.array(batch_y)
 
+def _validation_generator(batch_size, X, y):
+    """Generate batches of training data forever."""
+    while 1:
+        batch_X, batch_y = [], []
+        for i in range(batch_size):
+            #randomly choose sample data
+            sample_index = random.randint(0, len(X) - 1)
+            steering_angle = y[sample_index]
+
+            #do not apply image augmentation techniques on validation dataset
+            image, steering_angle = process_image(X[sample_index], steering_angle, augment=False)
+
+            #add processed sample image along with steering angle to batch
+            batch_X.append(image)
+            batch_y.append(steering_angle)
+        yield np.array(batch_X), np.array(batch_y)
+
 
 """*****************TRAIN**********************"""
 
@@ -179,7 +194,8 @@ def train():
     net.summary()
 
     #Fit model: set number of epochs, samples per epoch
-    net.fit_generator(_generator(256, X, y), samples_per_epoch=25600, nb_epoch=3)
+    net.fit_generator(_generator(256, X, y), validation_data=_validation_generator(50, X, y), nb_val_samples = 2560, samples_per_epoch=25600, nb_epoch=3)
+        #generating 10% of epoch samples as validation_data
 
     #Save model weights
     net.save('model.h5')
