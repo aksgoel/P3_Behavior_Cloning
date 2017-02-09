@@ -57,11 +57,21 @@ The overall strategy for deriving a model architecture was to tailor VGG-16 & NV
 
 My first step was to use a convolution neural network model similar to the VGG-16. I thought this model might be appropriate because its a relatively easier model architecture to understand and modify - and does a good job with image analysis.
 
-In order to gauge how well the model was working, I split my image and steering angle data into a training and validation set. I found that my first model had a low mean squared error on the training set but a high mean squared error on the validation set. This implied that the model was overfitting. 
+In order to gauge how well the model was working, I added an additoinal validation set. I found that my initial models had increasing mean square error on validation data. This implied that the model was overfitting. 
 
-To combat the overfitting, I modified the model so that ...
+To combat the overfitting, I modified the model so that my mean square error on validation error gradaully reduces. 
 
-Then I ... 
+Interestingly, I notice that my mean square error is lower on my validation data than on my training data. Hence I am quite confident that I am avoiding overfitting. The possible reason for mean square error being lower on my validation data could be because I am not adding the augmented image data to my validation dataset.   
+-------------------------------------------------------------------------------------
+Epoch 1/3
+25600/25600 [==============================] - 272s - loss: 0.0926 - val_loss: 0.0490
+
+Epoch 2/3
+25600/25600 [==============================] - 268s - loss: 0.0382 - val_loss: 0.0359
+
+Epoch 3/3
+25600/25600 [==============================] - 269s - loss: 0.0359 - val_loss: 0.0303
+-------------------------------------------------------------------------------------
 
 The final step was to run the simulator to see how well the car was driving around track one. There were a few spots where the vehicle fell off the track such as 
 - near to the tree (due to the shadow), 
