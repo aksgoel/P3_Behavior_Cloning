@@ -137,33 +137,33 @@ To augment the data set with additional training data, I futher randomly applied
 
 - brightness shifts: (to improve model predictions in case of varying brightness leverls)
 
-![model architecture] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/brightness_1.png)
-![model architecture] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/brightness_2.png)
-![model architecture] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/brightness_3.png)
+![image] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/brightness_1.png)
+![image] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/brightness_2.png)
+![image] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/brightness_3.png)
 
 - added shadows: (to improve model predictions in case of random shadows)
 
-![model architecture] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/shadow_1.png)
-![model architecture] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/shadow_2.png)
-![model architecture] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/shadow_31.png)
+![image] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/shadow_1.png)
+![image] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/shadow_2.png)
+![image] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/shadow_3.png)
 
 - Resized Image:
 
-![model architecture] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/resized.png)
+![image] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/resized.png)
 
 - PIL format: (required to leverage keras image preprocessing tools)
 
-![model architecture] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/PIL_format.png)
+![image] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/PIL_format.png)
 
 - shear shift:
 
-![model architecture] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/shear_1.png)
-![model architecture] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/sheer_2.png)
-![model architecture] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/sheer_3.png)
+![image] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/shear_1.png)
+![image] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/sheer_2.png)
+![image] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/sheer_3.png)
 
 - flipped image: image is flipped as the dataset is inbalanced, having larger left turns. 
 
-![model architecture] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/flip.png)
+![image] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/flip.png)
 
 With continous generation of additional training data (with image augmentation techniques), I created a large number of data points. I further applied image normalization to this dataset.
 
