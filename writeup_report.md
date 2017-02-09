@@ -133,18 +133,37 @@ To improve left and right turn coorection, I used images from left and right cam
 
 ![center camera image] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/base_BGR.png)
 
-To augment the data set, I randomly applied:
+To augment the data set with additional training data, I futher randomly applied:
 
-- flipped image:
-- brightness shifts:
+- brightness shifts: (to improve model predictions in case of varying brightness leverls)
 
 ![model architecture] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/brightness_1.png)
 ![model architecture] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/brightness_2.png)
 ![model architecture] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/brightness_3.png)
 
-- vertical shifts:
+- added shadows: (to improve model predictions in case of random shadows)
+
+![model architecture] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/shadow_1.png)
+![model architecture] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/shadow_2.png)
+![model architecture] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/shadow_31.png)
+
+- Resized Image:
+
+![model architecture] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/resized.png)
+
+- PIL format: (required to leverage keras image preprocessing tools)
+
+![model architecture] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/PIL_format.png)
+
 - shear shift:
-- added shadows:
+
+![model architecture] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/shear_1.png)
+![model architecture] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/sheer_2.png)
+![model architecture] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/sheer_3.png)
+
+- flipped image: image is flipped as the dataset is inbalanced, having larger left turns. 
+
+![model architecture] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/flip.png)
 
 After the collection process, I had X number of data points. I applied image normalization to this dataset.
 
@@ -154,6 +173,6 @@ I used this training data for training the model. The validation set helped dete
 
 ####4. Conclussion and Next Steps:
 
-This was a very interesting project where I was able to get inspired from existing Neural Network models, and apply my versions of them to project using Keras. 
-- The final model works fairly well on track one. As next steps I will like to enhance my applied image pre-processing techqniues and improve my model so that this works well on both Track two and on Udacity's on-road challenge 2 dataset. 
+This was a very interesting project where I was able to get inspired from existing neural network models such as VGG-16, and apply a modified versions of it to a behavior cloning project using Keras. 
+- The final model works fairly well on track one. As next steps I will like to enhance my applied image pre-processing techqniues and improve the model so that this works well on both Track two and on Udacity's on-road challenge 2 dataset. 
 - I will also like to experiment with neural network layers such as LSTM to enhance prediction over time series. This will be especially helpful while predicting throttle values in addition to steering angle. 
