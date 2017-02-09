@@ -115,33 +115,50 @@ dense_3:                   (None, 1)
 
 Since I did not have access to a joystick (required for smoother data collection) - I trained my model over Udacity's sample dataset. I generated additional datasets by applying image augmentation techniques. Here is an example image of center lane driving:
 
-![alt text][image2]
+- center camera
+![model architecture] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/center_2016_12_01_13_43_28_912.jpg)
 
 To improve left and right turn coorection, I used images from left and right camera of car. Here are examples of left and right camera images:
 
+- left camera
+![model architecture] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/left_2016_12_01_13_43_28_912.jpg)
 
+- right camera
+![model architecture] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/right_2016_12_01_13_43_28_912.jpg)
+
+- center camera in BGR
+![center camera image] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/base_BGR.png)
 
 To augment the data set, I randomly applied:
 
+- flipped image:
+![model architecture] (https://docs.google.com/drawings/d/1glfZJVpTOzPiCq4EVRtup1TaidIDVGetRC1Q5U4adMk/pub?w=1402&h=416)
+
 - brightness shifts:
-![alt text][image6]
-![alt text][image7]
+![model architecture] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/brightness_1.png)
+![model architecture] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/brightness_2.png)
+![model architecture] (https://github.com/aksgoel/P3_Behavior_Cloning/blob/master/Steering_Images/brightness_3.png)
 
 - vertical shifts:
-![alt text][image6]
-![alt text][image7]
+![model architecture] (https://docs.google.com/drawings/d/1glfZJVpTOzPiCq4EVRtup1TaidIDVGetRC1Q5U4adMk/pub?w=1402&h=416)
+![model architecture] (https://docs.google.com/drawings/d/1glfZJVpTOzPiCq4EVRtup1TaidIDVGetRC1Q5U4adMk/pub?w=1402&h=416)
 
 - shear shift:
-![alt text][image6]
-![alt text][image7]
+![model architecture] (https://docs.google.com/drawings/d/1glfZJVpTOzPiCq4EVRtup1TaidIDVGetRC1Q5U4adMk/pub?w=1402&h=416)
+![model architecture] (https://docs.google.com/drawings/d/1glfZJVpTOzPiCq4EVRtup1TaidIDVGetRC1Q5U4adMk/pub?w=1402&h=416)
 
 - added shadows:
-![alt text][image6]
-![alt text][image7]
+![model architecture] (https://docs.google.com/drawings/d/1glfZJVpTOzPiCq4EVRtup1TaidIDVGetRC1Q5U4adMk/pub?w=1402&h=416)
+![model architecture] (https://docs.google.com/drawings/d/1glfZJVpTOzPiCq4EVRtup1TaidIDVGetRC1Q5U4adMk/pub?w=1402&h=416)
 
-After the collection process, I had X number of data points. I then preprocessed this data by ...
+After the collection process, I had X number of data points. I applied image normalization to this dataset.
 
+I created a validation data set without applying image augmentation techniques to it.
 
-I finally randomly shuffled the data set and put Y% of the data into a validation set. 
+I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 3. I used an adam optimizer so that manually training the learning rate wasn't necessary.
 
-I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 3 as evidenced by ... I used an adam optimizer so that manually training the learning rate wasn't necessary.
+####4. Conclussion and Next Steps:
+
+This was a very interesting project where I was able to get inspired from existing Neural Network models, and apply my versions of them to project using Keras. 
+- The final model works fairly well on track one. As next steps I will like to enhance my applied image pre-processing techqniues and improve my model so that this works well on both Track two and on Udacity's on-road challenge 2 dataset. 
+- I will also like to experiment with neural network layers such as LSTM to enhance prediction over time series. This will be especially helpful while predicting throttle values in addition to steering angle. 
